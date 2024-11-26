@@ -1,0 +1,47 @@
+.root {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 400px;
+  height: 77px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.rectangle2 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 10.3896%;
+  bottom: 11.6883%;
+  border-radius: 10px;
+  background-color: #eaf0f7;
+}
+.enterEmail {
+  color: #4f555a;
+  font-size: 18px;
+  line-height: 77px;
+  font-weight: 500;
+  font-family: Gilroy, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  letter-spacing: 0.09em;
+  position: absolute;
+  left: 5%;
+  right: 68%;
+  top: 0;
+  bottom: 0;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.xIcon {
+  position: absolute;
+  left: 88.25%;
+  right: 5.75%;
+  top: 33.7662%;
+  bottom: 35.0649%;
+}
+.icon {
+  width: 100%;
+  height: 100%;
+}

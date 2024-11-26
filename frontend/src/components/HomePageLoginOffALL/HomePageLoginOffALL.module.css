@@ -1,0 +1,191 @@
+.enterName.enterName {
+  left: 1194px;
+  top: 408px;
+}
+.enterEmail {
+  color: #4f555a;
+  font-size: 18px;
+  line-height: 77px;
+  font-weight: 500;
+  font-family: Be Vietnam Pro, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  letter-spacing: 0.09em;
+  position: absolute;
+  left: 5%;
+  right: 65.75%;
+  top: 0;
+  bottom: 0;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.password.password {
+  left: 1192px;
+  top: 485px;
+}
+.root {
+  position: relative;
+  width: 1440px;
+  height: 882px;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #fff;
+  overflow: hidden;
+}
+.unnamed {
+  position: absolute;
+  left: -208px;
+  top: -99px;
+  width: 1920px;
+  height: 1080px;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 40px;
+  background-color: #f6f6f6;
+  overflow: hidden;
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+.background {
+  position: absolute;
+  left: 142px;
+  top: 291px;
+  width: 430px;
+  height: 492px;
+  overflow: visible;
+}
+.icon {
+  width: 100%;
+  height: 100%;
+}
+.rectangle4 {
+  position: absolute;
+  left: 1194px;
+  top: 646px;
+  width: 400px;
+  height: 60px;
+  border-radius: 10px;
+  background-color: #4461f2;
+  box-shadow: 0px 12px 21px 4px #4461f226;
+}
+.signIn {
+  color: #fff;
+  font-size: 19px;
+  line-height: 77px;
+  font-weight: bold;
+  font-family: Be Vietnam Pro, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  letter-spacing: 0.09em;
+  position: absolute;
+  left: 1359px;
+  top: 637px;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.forgotPassword {
+  color: #c7c7c7;
+  font-size: 14px;
+  line-height: 77px;
+  font-weight: 500;
+  font-family: Be Vietnam Pro, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  letter-spacing: 0.1em;
+  position: absolute;
+  left: 1194px;
+  top: 562px;
+  width: 172px;
+  height: 41px;
+  justify-content: center;
+  flex-direction: column;
+}
+.icon2 {
+  position: absolute;
+  left: 76.25%;
+  right: 23.2292%;
+  top: 13.7037%;
+  bottom: 85.7407%;
+  overflow: visible;
+}
+.icon3 {
+  width: 100%;
+  height: 100%;
+}
+.english {
+  color: #000;
+  font-size: 17px;
+  font-weight: 500;
+  font-family: Be Vietnam Pro, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  letter-spacing: 0.06em;
+  position: absolute;
+  left: 1393px;
+  top: 140px;
+  width: 74px;
+  height: 16px;
+  flex-direction: column;
+}
+.line3 {
+  position: absolute;
+  left: 1527px;
+  top: 168px;
+  width: 26px;
+  max-width: 100%;
+  height: 0;
+  max-height: 100%;
+  outline: solid 1.5px #4461f2;
+}
+.signIn2 {
+  color: #4461f2;
+  font-size: 17px;
+  font-weight: bold;
+  font-family: Be Vietnam Pro, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  letter-spacing: 0.06em;
+  position: absolute;
+  left: 1510px;
+  top: 140px;
+  width: 74px;
+  height: 16px;
+  flex-direction: column;
+}
+.signInSPSOHCMUTPrintSystem {
+  color: #000;
+  font-size: 58px;
+  line-height: 77px;
+  font-weight: bold;
+  font-family: Be Vietnam Pro, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 417px;
+  top: 354px;
+  width: 607px;
+  height: 141px;
+  flex-direction: column;
+}
+.ifYouDonTHaveAnAccountYouCanCo {
+  color: #000;
+  font-size: 23px;
+  font-weight: 500;
+  font-family: Be Vietnam Pro, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 417px;
+  top: 561px;
+  width: 290px;
+  height: 63px;
+  flex-direction: column;
+}
+._1_logobachkhoatoi2 {
+  position: absolute;
+  left: 69.6875%;
+  right: 24.4271%;
+  top: 24.7222%;
+  bottom: 64.3519%;
+  background-image:/* webpackIgnore: true */ url('/assets/_1_logobachkhoatoi2.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
