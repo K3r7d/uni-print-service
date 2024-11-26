@@ -35,7 +35,12 @@ export const HomePageLoginOffALL: FC<Props> = memo(function HomePageLoginOffALL(
         <EnterName_Property1Default
           className={classes.enterName}
           text={{
-            enterEmail: <div className={classes.enterEmail}>Enter Email</div>,
+            enterEmail: 
+            <div className={classes.enterEmail}>
+                <input>
+                  type = "text"
+                </input>
+            </div>,
           }}
         />
         <Password_Property1Default className={classes.password} />
