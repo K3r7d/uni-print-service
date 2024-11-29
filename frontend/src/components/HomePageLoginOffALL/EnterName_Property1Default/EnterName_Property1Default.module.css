@@ -3,36 +3,87 @@
   left: 0;
   top: 0;
   width: 400px;
-  height: 77px;
+  height: 300px;
   flex-direction: column;
+  box-sizing: border-box;
+  overflow: visible;
   align-items: flex-start;
+  cursor: pointer;
 }
+
 .rectangle2 {
   position: absolute;
   left: 0;
   right: 0;
-  top: 10.3896%;
-  bottom: 11.6883%;
+  top: 0; /* Positioned at the top */
+  height: 65px; /* Half the container height */
   border-radius: 10px;
   background-color: #eaf0f7;
 }
-.enterEmail {
-  color: #4f555a;
-  font-size: 18px;
+
+.rectangle3 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 85px; /* Positioned at the bottom */
+  height: 65px; /* Half the container height */
+  border-radius: 10px;
+  background-color: #eaf0f7;
+}
+
+.rectangle4{
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  right: 0px; 
+  top: 210px;
+  height: 65px;
+  border-radius: 10px;
+  background-color: #4461f2;
+  overflow: hidden;
+  box-shadow: 0px 12px 21px 4px #4461f226;
+  z-index: 1;
+  box-sizing: border-box;
+  cursor: pointer;
+  text-align: center;
+}
+
+.signIn {
+  color: #fff;
+  font-size: 19px;
   line-height: 77px;
-  font-weight: 500;
-  font-family: Gilroy, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+  font-weight: bold;
+  font-family: Be Vietnam Pro, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
     'Liberation Sans', sans-serif;
   letter-spacing: 0.09em;
   position: absolute;
-  left: 5%;
-  right: 68%;
-  top: 0;
-  bottom: 0;
-  width: min-content;
-  height: min-content;
+  vertical-align: middle;
+  text-align: center;
+  margin-left: 162px;
   white-space: nowrap;
   flex-direction: column;
+  bottom: -10px;
+}
+
+.error {
+  
+}
+
+.enterEmail input {
+  color: #4f555a;
+  font-size: 15px;
+  line-height: 1.5; 
+  font-weight: 500;
+  width: 400px; 
+  height: 100%; 
+  justify-content: center; 
+  align-items: center;    
+  margin-left: 10px; 
+  font-family: Be Vietnam Pro, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
+  letter-spacing: 0.09em;
+  background-color: transparent; 
+  box-sizing: border-box; 
+  padding: 0 10px; 
 }
 .xIcon {
   position: absolute;

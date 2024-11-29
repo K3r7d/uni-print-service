@@ -1,4 +1,4 @@
-import { memo } from 'react';
+import { memo,useState } from 'react';
 import type { FC } from 'react';
 
 import resets from '../_resets.module.css';
@@ -11,7 +11,7 @@ import { Password_Property1Default } from './Password_Property1Default/Password_
 interface Props {
   className?: string;
 }
-/* @figmaId 1:50 */
+
 export const HomePageLoginOffALL: FC<Props> = memo(function HomePageLoginOffALL(props = {}) {
   return (
     <div className={`${resets.clapyResets} ${classes.root}`}>
@@ -19,8 +19,8 @@ export const HomePageLoginOffALL: FC<Props> = memo(function HomePageLoginOffALL(
         <div className={classes.background}>
           <BackgroundIcon className={classes.icon} />
         </div>
-        <div className={classes.rectangle4}></div>
-        <div className={classes.signIn}>Sign In</div>
+        {/* <div className={classes.rectangle4}></div> */}
+        {/* <div className={classes.signIn}>Sign In</div> */}
         <div className={classes.forgotPassword}>Forgot Password ?</div>
         <div className={classes.icon2}>
           <Icon className={classes.icon3} />
@@ -35,15 +35,10 @@ export const HomePageLoginOffALL: FC<Props> = memo(function HomePageLoginOffALL(
         <EnterName_Property1Default
           className={classes.enterName}
           text={{
-            enterEmail: 
-            <div className={classes.enterEmail}>
-                <input>
-                  type = "text"
-                </input>
-            </div>,
+            enterEmail: <div className={classes.enterEmail}>Enter Email</div>,
+            enterPass: <div className={classes.enterPass}>Enter Password</div>,
           }}
         />
-        <Password_Property1Default className={classes.password} />
         <div className={classes._1_logobachkhoatoi2}></div>
       </div>
     </div>
