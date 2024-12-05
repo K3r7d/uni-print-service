@@ -8,9 +8,14 @@ import {
 } from "react-router-dom";
 
 import classes from './App.module.css';
+import { UserProvider } from './UserContext';
 import resets from './components/_resets.module.css';
 import { HomePageLoginOffALL } from './components/HomePageLoginOffALL/HomePageLoginOffALL.js';
 import UserPage from './components/UserPage/user.js'
+import Information from './components/Information/user';
+import Payment from './components/Payment/user';
+import History from './components/PrintHistory/user';
+
 
 interface Props {
   className?: string;
@@ -18,13 +23,18 @@ interface Props {
 export const App: FC<Props> = memo(function App(props = {}) {
   return (
     <BrowserRouter>
+      <UserProvider>
       <div className={`${resets.clapyResets} ${classes.root}`}>
         <Routes>
           <Route path="/" element={<HomePageLoginOffALL />} />
           <Route path="/user/:username" element={<UserPage />} />
           <Route path="/admin/:username" element={<UserPage />} />
+          <Route path="/user/:username/info" element={<Information />}/>
+          <Route path="/user/:username/payment" element={<Payment></Payment>}/>
+          <Route path="/user/:username/history" element={<History></History>}></Route>
         </Routes>
       </div>
+      </UserProvider>
     </BrowserRouter>
   );
 });
