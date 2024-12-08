@@ -1,0 +1,22 @@
+.masterOutlineButton.masterOutlineButton {
+  align-self: flex-start;
+  outline: solid 1px #cecece;
+  border-radius: 8px;
+}
+.button {
+  color: #6d6d6d;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  z-index: 0;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.root {
+  width: min-content;
+  height: min-content;
+}

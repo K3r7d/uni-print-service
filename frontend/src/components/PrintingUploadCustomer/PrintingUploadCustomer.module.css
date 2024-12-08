@@ -1,0 +1,313 @@
+.root {
+  position: relative;
+  width: 1440px;
+  height: 882px;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #fff;
+  overflow: hidden;
+}
+.vector {
+  position: absolute;
+  left: 95.3804%;
+  right: 4.064%;
+  top: 7.1429%;
+  bottom: 92.4036%;
+  overflow: visible;
+}
+.icon {
+  width: 100%;
+  height: 100%;
+}
+.ellipse196 {
+  position: absolute;
+  left: 1332.4789px;
+  top: 48px;
+  width: 32px;
+  height: 32px;
+  overflow: visible;
+  filter: drop-shadow(0px 17px 34px #0003);
+}
+.icon2 {
+  width: 100%;
+  height: 100%;
+}
+.image5 {
+  position: absolute;
+  left: 1318.4784px;
+  top: 46px;
+  width: 61px;
+  height: 34px;
+  background-image:/* webpackIgnore: true */ url('/assets/image5.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-mask-image:/* webpackIgnore: true */ url('/assets/avatar.svg');
+  mask-image:/* webpackIgnore: true */ url('/assets/avatar.svg');
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: 15.000062704086304px 3px;
+  mask-position: 15.000062704086304px 3px;
+  -webkit-mask-size: 30px 30px;
+  mask-size: 30px 30px;
+}
+.ellipse97 {
+  position: absolute;
+  left: 1354.4785px;
+  top: 72px;
+  width: 10px;
+  height: 10px;
+  overflow: visible;
+  -webkit-mask-image:/* webpackIgnore: true */ url('/assets/avatar.svg');
+  mask-image:/* webpackIgnore: true */ url('/assets/avatar.svg');
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: -21.00003170967102px -23px;
+  mask-position: -21.00003170967102px -23px;
+  -webkit-mask-size: 30px 30px;
+  mask-size: 30px 30px;
+}
+.icon3 {
+  width: 100%;
+  height: 100%;
+}
+._1_logobachkhoatoi1 {
+  position: absolute;
+  right: 1318.4849px;
+  bottom: 784px;
+  width: 67.5151px;
+  height: 68px;
+  background-image:/* webpackIgnore: true */ url('/assets/_1_logobachkhoatoi1.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.uploadV1Step1 {
+  position: absolute;
+  left: 349px;
+  top: 237px;
+  width: 742px;
+  height: min-content;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+  border-radius: 16px;
+  background-color: #fff;
+  box-shadow: 0px 4px 6px 0px #0000000d, 0px 4px 50px 0px #00000014;
+}
+.title {
+  height: min-content;
+  align-self: stretch;
+  flex-direction: column;
+}
+.titleSection {
+  color: #0b0b0b;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+  font-family: Be Vietnam Pro, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  letter-spacing: -0.2px;
+  height: min-content;
+  align-self: stretch;
+  flex-direction: column;
+}
+.desc {
+  color: #6d6d6d;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: Be Vietnam Pro, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  height: 20px;
+  align-self: stretch;
+  flex-direction: column;
+}
+.labelWrapper {
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  width: 100%;
+}
+.manyUpload {
+  height: min-content;
+  align-self: stretch;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 24px;
+  outline: dashed 1px #1849d6;
+  outline-offset: -1px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+.upload1 {
+  z-index: 0;
+  width: 42px;
+  height: 42px;
+  background-image:/* webpackIgnore: true */ url('/assets/upload1.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.frame2 {
+  z-index: 0;
+  height: min-content;
+  align-self: stretch;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.text {
+  height: min-content;
+  align-self: stretch;
+  justify-content: center;
+}
+.dragYourFileSToStartUploading {
+  color: #0b0b0b;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: Be Vietnam Pro, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.divider {
+  width: 201px;
+  height: min-content;
+  align-items: center;
+  gap: 12px;
+}
+.line1 {
+  max-width: 100%;
+  height: 0.9706px;
+  max-height: 100%;
+  flex: 1;
+  background-color: #e7e7e7;
+}
+.text2 {
+  color: #6d6d6d;
+  font-size: 12px;
+  line-height: 18px;
+  font-family: Be Vietnam Pro, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  text-align: center;
+  align-items: center;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.line2 {
+  max-width: 100%;
+  height: 0.9706px;
+  max-height: 100%;
+  flex: 1;
+  background-color: #e7e7e7;
+}
+.Outline {
+  width: min-content;
+  height: min-content;
+}
+.button {
+  width: min-content;
+  height: min-content;
+  align-self: flex-start;
+  padding: 6px 12px;
+  outline: solid 1px #1849d6;
+  outline-offset: -1px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+.browse {
+  color: #1849d6;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 600;
+  font-family: Be Vietnam Pro, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  z-index: 0;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.desc2 {
+  color: #6d6d6d;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: Be Vietnam Pro, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  height: 20px;
+  align-self: stretch;
+  flex-direction: column;
+}
+.labelWrapper2 {
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  width: 100%;
+}
+.buttons {
+  height: min-content;
+  align-self: stretch;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 16px;
+}
+.Outline2 {
+  width: 80px;
+  height: 44px;
+  justify-content: center;
+  align-items: center;
+  outline: solid 1px #cecece;
+  outline-offset: -1px;
+  border-radius: 8px;
+}
+.button2 {
+  color: #6d6d6d;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  z-index: 0;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.Filled {
+  width: min-content;
+  height: min-content;
+  padding: 12px 16px;
+  border-radius: 8px;
+  background-color: #a5aeff;
+}
+.button3 {
+  color: #fff;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.icon_doc1 {
+  position: absolute;
+  left: 136px;
+  top: 244px;
+  width: 74px;
+  height: 75px;
+  background-image:/* webpackIgnore: true */ url('/assets/icon_doc1.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

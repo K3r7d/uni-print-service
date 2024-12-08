@@ -1,0 +1,36 @@
+.root {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  width: 94px;
+  height: 60px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.rectangle34624334 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 60%;
+  border-radius: 9px;
+  background-color: #35b94b;
+}
+.rEADY {
+  color: #fff;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  letter-spacing: 0.0125em;
+  position: absolute;
+  left: 22.3404%;
+  right: 23.4043%;
+  top: 5%;
+  bottom: 65%;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}

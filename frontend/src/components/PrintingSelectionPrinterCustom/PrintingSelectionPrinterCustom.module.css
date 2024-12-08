@@ -1,0 +1,367 @@
+.icon2.icon2 {
+  transform-origin: top left;
+  left: 1391.4784px;
+  top: 60px;
+  transform: matrix(0, 1, -1, 0, 0, 0);
+}
+.icon {
+  width: 100%;
+  height: 100%;
+}
+.group1261153353.group1261153353 {
+  left: 53px;
+  top: 36px;
+}
+.userName {
+  color: #25213b;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 10.5825%;
+  right: 73.4951%;
+  top: 15.2641%;
+  bottom: 61.1459%;
+  flex-direction: column;
+}
+.lastLogin {
+  color: #6e6893;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  letter-spacing: 0.0125em;
+  position: absolute;
+  left: 25.4369%;
+  right: 64.9515%;
+  top: 15.2641%;
+  bottom: 29.2301%;
+  flex-direction: column;
+}
+.lastLogin2 {
+  color: #6e6893;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  letter-spacing: 0.0125em;
+  position: absolute;
+  left: 59.0291%;
+  right: 34.6602%;
+  top: 16.7413%;
+  bottom: 29.1406%;
+  text-align: end;
+  align-items: end;
+  flex-direction: column;
+}
+.lastLogin3 {
+  color: #6e6893;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  letter-spacing: 0.0125em;
+  position: absolute;
+  left: 75.8252%;
+  right: 17.1845%;
+  top: 16.7413%;
+  bottom: 28.4691%;
+  flex-direction: column;
+}
+.checkboxField.checkboxField {
+  align-items: flex-start;
+}
+.group12611533532.group12611533532 {
+  left: 53px;
+  top: 102px;
+}
+.checkboxField2.checkboxField2 {
+  align-items: flex-start;
+}
+.group12611533533.group12611533533 {
+  left: 53px;
+  top: 162px;
+}
+.checkboxField3.checkboxField3 {
+  align-items: flex-start;
+}
+.group1261153354.group1261153354 {
+  left: 53px;
+  top: 228px;
+}
+.checkboxField4.checkboxField4 {
+  align-items: flex-start;
+}
+.group1261153355.group1261153355 {
+  left: 53px;
+  top: 294px;
+}
+.checkboxField5.checkboxField5 {
+  align-items: flex-start;
+}
+.group1261153356.group1261153356 {
+  left: 53px;
+  top: 360px;
+}
+.checkboxField6.checkboxField6 {
+  align-items: flex-start;
+}
+.group1261153357.group1261153357 {
+  left: 53px;
+  top: 426px;
+}
+.checkboxField7.checkboxField7 {
+  align-items: flex-start;
+}
+.group1261153358.group1261153358 {
+  left: 53px;
+  top: 492px;
+}
+.checkboxField8.checkboxField8 {
+  align-items: flex-start;
+}
+.root {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #fff;
+  overflow: hidden;
+}
+.ellipse196 {
+  position: absolute;
+  left: 1338.4789px;
+  top: 51px;
+  width: 32px;
+  height: 32px;
+  overflow: visible;
+  filter: drop-shadow(0px 17px 34px #0003);
+}
+.icon3 {
+  width: 100%;
+  height: 100%;
+}
+.image5 {
+  position: absolute;
+  left: 1324.4784px;
+  top: 49px;
+  width: 61px;
+  height: 34px;
+  background-image:/* webpackIgnore: true */ url('/assets/image5.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-mask-image:/* webpackIgnore: true */ url('/assets/maskGroup.svg');
+  mask-image:/* webpackIgnore: true */ url('/assets/maskGroup.svg');
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: 15.000062942504883px 3px;
+  mask-position: 15.000062942504883px 3px;
+  -webkit-mask-size: 30px 30px;
+  mask-size: 30px 30px;
+}
+.ellipse97 {
+  position: absolute;
+  left: 1360.4785px;
+  top: 75px;
+  width: 10px;
+  height: 10px;
+  overflow: visible;
+}
+.icon4 {
+  width: 100%;
+  height: 100%;
+}
+._1_logobachkhoatoi1 {
+  position: absolute;
+  right: 1312.4849px;
+  bottom: 781px;
+  width: 67.5151px;
+  height: 68px;
+  background-image:/* webpackIgnore: true */ url('/assets/_1_logobachkhoatoi1.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.group6 {
+  position: absolute;
+  left: 116px;
+  top: 211px;
+  width: 18.0004px;
+  height: 18.0004px;
+  overflow: visible;
+}
+.icon5 {
+  width: 100%;
+  height: 100%;
+}
+.pRINTERLIST {
+  color: #000;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 500;
+  font-family: Quicksand, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 93px;
+  top: 148px;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.rectangle7 {
+  position: absolute;
+  left: 93px;
+  top: 204px;
+  width: 474px;
+  height: 40px;
+  outline: solid 1px #cbd5e0;
+  outline-offset: -1px;
+  border-radius: 6px;
+  background-color: #fff;
+}
+.group297 {
+  position: absolute;
+  left: 112px;
+  top: 215px;
+  width: 18.0004px;
+  height: 18.0004px;
+  overflow: visible;
+}
+.icon6 {
+  width: 100%;
+  height: 100%;
+}
+.searchByPrintingIDLocation {
+  color: #9492a0;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  letter-spacing: 0.0125em;
+  position: absolute;
+  left: 153px;
+  top: 216px;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.frame532 {
+  position: absolute;
+  left: 134px;
+  top: 268px;
+  width: 1192px;
+  height: 541px;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow: auto;
+}
+
+/* Custom scrollbar */
+.frame532::-webkit-scrollbar {
+  width: 8px; /* Set the width of the scrollbar */
+  height: 8px; /* Set the height for horizontal scrollbar */
+}
+
+.frame532::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3); /* Scrollbar color */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.frame532::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.6); /* Darker color when hovered */
+}
+
+.frame532::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Background of the track */
+  border-radius: 10px; /* Rounded corners for track */
+}
+
+.frame532::-webkit-scrollbar-track-piece {
+  background-color: #f1f1f1; /* Track background color */
+}
+
+.lastLogin4 {
+  color: #6e6893;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  letter-spacing: 0.0125em;
+  position: absolute;
+  left: 84.7315%;
+  right: 9.2282%;
+  top: 8.3179%;
+  bottom: 85.0277%;
+  flex-direction: column;
+}
+.frame531 {
+  position: absolute;
+  left: 64px;
+  top: 119px;
+  width: 100px;
+  height: 100px;
+  flex-direction: column;
+  overflow: hidden;
+}
+.rectangle34624340 {
+  position: absolute;
+  left: 1165px;
+  top: 156px;
+  width: 162px;
+  height: 39px;
+  border-radius: 8px;
+  background-color: #006fff;
+}
+.ChoosePrinter {
+  color: #fff;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  letter-spacing: 0.0125em;
+  position: absolute;
+  left: 1185px;
+  top: 167px;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.rectangle346243402 {
+  position: absolute;
+  left: 982px;
+  top: 156px;
+  width: 162px;
+  height: 39px;
+  outline: solid 1px #00000080;
+  outline-offset: -1px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+.cancel {
+  color: #00000080;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  letter-spacing: 0.0125em;
+  position: absolute;
+  left: 1038px;
+  top: 167px;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}

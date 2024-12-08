@@ -15,6 +15,10 @@ import UserPage from './components/UserPage/user.js'
 import Information from './components/Information/user';
 import Payment from './components/Payment/user';
 import History from './components/PrintHistory/user';
+import {PrintingUploadCustomer} from './components/PrintingUploadCustomer/PrintingUploadCustomer';
+import { PrintingSetPropertiesAnimate1 } from './components/PrintingSetPropertiesAnimate1/PrintingSetPropertiesAnimate1';
+import { PrintingSelectionPrinterCustom } from './components/PrintingSelectionPrinterCustom/PrintingSelectionPrinterCustom';
+
 
 
 interface Props {
@@ -32,6 +36,10 @@ export const App: FC<Props> = memo(function App(props = {}) {
           <Route path="/user/:username/info" element={<Information />}/>
           <Route path="/user/:username/payment" element={<Payment></Payment>}/>
           <Route path="/user/:username/history" element={<History></History>}></Route>
+          <Route path="/print/upload" element={<PrintingUploadCustomer></PrintingUploadCustomer>} />
+          <Route path="/print/setprop" element={<PrintingSetPropertiesAnimate1></PrintingSetPropertiesAnimate1>} />
+          <Route path="/print/printer" element={<PrintingSelectionPrinterCustom></PrintingSelectionPrinterCustom>} />
+
         </Routes>
       </div>
       </UserProvider>

@@ -1,0 +1,127 @@
+.component1.component1 {
+  left: 90.8738%;
+  right: 0;
+  top: 16.7413%;
+  bottom: 0%;
+  width: initial;
+  height: initial;
+}
+.root {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  width: 1030px;
+  height: 65.7059px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.rectangle78 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 98.6124%;
+  max-width: 100%;
+  max-height: 100%;
+  background-color: #d9d5ec;
+}
+.userName {
+  color: #25213b;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 10.5825%;
+  right: 73.4951%;
+  top: 15.2641%;
+  bottom: 61.1459%;
+  flex-direction: column;
+}
+.lastLogin {
+  color: #6e6893;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  letter-spacing: 0.0125em;
+  position: absolute;
+  left: 25.4369%;
+  right: 64.9515%;
+  top: 15.2641%;
+  bottom: 29.2301%;
+  flex-direction: column;
+}
+.lastLogin2 {
+  color: #6e6893;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  letter-spacing: 0.0125em;
+  position: absolute;
+  left: 46.0194%;
+  right: 51.4563%;
+  top: 15.2641%;
+  bottom: 30.6177%;
+  flex-direction: column;
+}
+.lastLogin3 {
+  color: #6e6893;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  letter-spacing: 0.0125em;
+  position: absolute;
+  left: 59.0291%;
+  right: 34.6602%;
+  top: 16.7413%;
+  bottom: 29.1406%;
+  text-align: end;
+  align-items: end;
+  flex-direction: column;
+}
+.lastLogin4 {
+  color: #6e6893;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  letter-spacing: 0.0125em;
+  position: absolute;
+  left: 75.8252%;
+  right: 17.1845%;
+  top: 16.7413%;
+  bottom: 28.4691%;
+  flex-direction: column;
+}
+.checkboxField {
+  position: absolute;
+  left: 1px;
+  top: 10px;
+  width: 17px;
+  height: 18px;
+  flex-direction: column;
+}
+.checkboxAndLabel {
+  height: min-content;
+  align-self: stretch;
+  align-items: center;
+  gap: 12px;
+}
+.checkbox {
+  width: 16px;
+  height: 16px;
+  justify-content: center;
+  align-items: center;
+  outline: solid 1px #b2b2b2;
+  outline-offset: -1px;
+  border-radius: 4px;
+  background-color: #d9d9d9;
+  overflow: hidden;
+}
