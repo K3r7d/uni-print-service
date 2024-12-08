@@ -6,6 +6,7 @@ import classes from './EnterName_Property1Default.module.css';
 import { useNavigate } from 'react-router-dom';
 import { XIconIcon } from './XIconIcon.js';
 import { useUserContext } from '../../../UserContext';
+import axios from 'axios'
 
 
 interface Props {
@@ -29,7 +30,7 @@ const users: User = {name: "TaMi", pass: "123" };
 
 /* @figmaId 1:3 */
 export const EnterName_Property1Default: FC<Props> = memo(function EnterName_Property1Default(props = {}) {
-  const {username, setusername} = useUserContext();
+  const {username,setUserId,setusername,setMoney,setf,setPaper} = useUserContext();
   const [password, setpassword] = useState<string>("");
   const [show,setshow] = useState<string>("")
   const [showerr, setshowerr] = useState(false);
@@ -66,20 +67,34 @@ export const EnterName_Property1Default: FC<Props> = memo(function EnterName_Pro
   };
 
 
-  const LoginCheck = () => {
-    // const navigate = useNavigate();
-    if(username != users.name || password != users.pass) {
-      setshowerr(true) 
-    }
+  const LoginCheck = async () => {
+    try {
+      // Define the updated API endpoint
+      const apiUrl = `http://localhost:8000/users/login`;
+  
+      // Make a POST request with username and password in the request body
+      const response = await axios.post(apiUrl, {
+        username: username,
+        password: password,
+      });
+  
+      if (response.data.message=='Login successful') {
+        setshowerr(false);
+        setUserId(response.data.userId)
+        setusername(response.data.fullname)
+        setMoney(response.data.remaining_paper)
+        
+        if(response.data.role == 'user'){
+          navigate(`/user/${username}`); // Navigate to the user's page
+        }
 
-    else {
-      setshowerr(false); 
-      console.log("DEBUG");
-      console.log(username) 
-      navigate(`/user/${username}`)
+      } else {
+        setshowerr(true); // Show error message for invalid credentials
+      }
+    } catch (error) {
+      setshowerr(true); // Show error message for network or server errors
     }
-      
-  } 
+  };
   
   return (
     <form
