@@ -1,28 +1,83 @@
 html,
 body {
-    height: 100%;
-    width: 100%;
+    height: 1440px;
+    width: 882px;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    
     /* overflow: hidden;  */
 }
-
+/* 
 body {
     transform: scale(2.3);
     transform-origin: middle;
-}
+} */
 
 .rectangle{
     position: absolute;
     width: 100%; 
-    height: 63px; 
+    height: 100%; 
     left:0; 
     bottom:0px;
     justify-content: center;
     align-items: center; 
     background-color: #fff;
+    display: flex;
+    box-sizing: border-box;
 }
 
+.search_section {
+    display: flex;
+    width: 1000px;
+    justify-content: flex-start; /* Align items to the left */
+    align-items: flex-start; /* Align items to the top */
+    margin: 300px 20px 600px 100px; /* Remove any margin to prevent offset */
+    position: absolute; /* Position it absolutely within its container */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+}
+
+.search_bar {
+    width: 100%; /* Full width of the container */
+    max-width: 800px; /* Prevent it from growing too wide */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+ 
+.log_table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+
+  .log_table th,
+  .log-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .log_table th {
+    background-color: #f3e8ff;
+    color: #6a1b9a;
+  } 
+  
+  
+
+  .icon_button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #6a1b9a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+  }
 
 .pageNumber { 
     position: absolute;
@@ -41,6 +96,25 @@ body {
     line-height: 18px;
 }
 
+/* Pagination Styling */
+.pagination {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  
+  .pagination_button {
+    border: 1px solid #6a1b9a;
+    color: #6a1b9a;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .pagination_button.active {
+    background-color: #6a1b9a;
+    color: #fff;
+  }
 
 .userTables{
     position: absolute;
@@ -96,4 +170,10 @@ body {
     /* Keeps content inside .root visible only within bounds */
     flex-direction: column;
     align-items: flex-start;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }

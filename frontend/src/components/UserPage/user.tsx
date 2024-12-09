@@ -22,12 +22,6 @@ const UserPage: React.FC = () => {
 
   const navigate = useNavigate()
 
-  const logo_frag1 = useSpring(
-    {
-      from: { opacity: 1 },
-      to: { opacity: isVisible ? 0 : 1, }
-    }
-  )
 
   const analog_animate = useSpring({
     from: { height: 0, opacity: 0, transform: 'translateY(-100%)' }, // Start above the screen
@@ -57,6 +51,8 @@ const UserPage: React.FC = () => {
       <div className='Trangchu'> TRANG CHỦ</div>
       <div className='chaomungUser'>Chào mừng, {username} </div>
 
+
+      {/* User table */}
       <animated.div
         className='userLogo'
         style={logo_animate}
@@ -67,6 +63,7 @@ const UserPage: React.FC = () => {
         {isVisible ? <ChevronDown className='userTemplateVisible' /> : <ChevronUp className='userTemplateVisible' />}
 
       </div>
+
       <animated.div
         className='userTemplateTable'
         style={{

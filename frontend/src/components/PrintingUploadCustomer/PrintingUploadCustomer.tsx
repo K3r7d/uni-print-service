@@ -3,14 +3,12 @@ import type { FC } from 'react';
 
 import resets from '../_resets.module.css';
 import { Ellipse97Icon, Ellipse196Icon, VectorIcon } from './other.js';
-import classes from './PrintingUploadCustomer.module.css';
+import classes from './Upload.module.css';
 
 interface Props {
   className?: string;
 }
 
-
-/* @figmaId 93:2196 */
 export const PrintingUploadCustomer: FC<Props> = memo(function PrintingUploadCustomer(props = {}) {
   
 
