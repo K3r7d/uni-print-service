@@ -81,9 +81,6 @@ export const EnterName_Property1Default: FC<Props> = memo(function EnterName_Pro
       if (response.data.message=='Login successful') {
         setshowerr(false);
         setUserId(response.data.userId)
-        setusername(response.data.fullname)
-        setMoney(response.data.remaining_paper)
-        
         if(response.data.role == 'user'){
           navigate(`/user/${username}`); // Navigate to the user's page
         }
