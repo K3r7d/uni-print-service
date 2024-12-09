@@ -118,7 +118,7 @@ const UserPage: React.FC = () => {
         </div>
       </button>
 
-      <button className='in' onClick = {()=>navigate(`user/${username}/uploadfile`)}>
+      <button className='in' onClick = {()=>navigate(`/print/upload`)}>
         <div className='inName'> In Tài Liệu </div>
         <div className='inTable'>
           <div className='inLogo'></div>

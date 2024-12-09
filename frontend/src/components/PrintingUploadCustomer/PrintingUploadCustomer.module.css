@@ -1,9 +1,9 @@
 .root {
   position: relative;
-  width: 1440px;
-  height: 882px;
+  width: 1920px;
+  height: 1080px;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   background-color: #fff;
   overflow: hidden;
 }

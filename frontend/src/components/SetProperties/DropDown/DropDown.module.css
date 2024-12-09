@@ -1,0 +1,127 @@
+.hoverDropDown.hoverDropDown {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: initial;
+  height: initial;
+}
+.root {
+  position: absolute;
+  left: 20px;
+  top: 17px;
+  width: 365px;
+  height: 62px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.desc {
+  color: #6d6d6d;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: Be Vietnam Pro, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 18.2796%;
+  right: 0;
+  top: 51.6129%;
+  bottom: 16.129%;
+  height: min-content;
+  flex-direction: column;
+}
+.dropdownToggle {
+  display: flex;
+  width: 360px;
+  height: 60px;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid #ccc; /* Add border */
+  border-radius: 10px; /* Optional: rounded corners for the toggle */
+  padding: 8px 12px; /* Adjust padding for spacing */
+}
+
+/* Optionally, you can add hover effect for toggle */
+.dropdownToggle:hover {
+  background-color: #f0f0f0; /* Highlight on hover */
+}
+
+/* Ensure the dropdown options are stacked vertically */
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%; /* Ensures full width */
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  z-index: 10;
+  max-height: 200px; /* Maximum height for the vertical scroll */
+  overflow-y: auto; /* Enables vertical scrolling */
+  overflow-x: hidden; /* Ensures no horizontal scroll */
+  box-sizing: border-box; /* Ensures padding is inside the width */
+  display: flex;
+  flex-direction: column; /* Ensure vertical stacking */
+}
+
+.labelWrapper {
+  white-space: nowrap;
+  display: block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 100%;
+}
+.trangIn {
+  color: #000;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  font-family: Be Vietnam Pro, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 18.2796%;
+  right: 44.8925%;
+  top: 16.129%;
+  bottom: 35.4839%;
+  flex-direction: column;
+}
+.vector2 {
+  position: absolute;
+  left: 92.2043%;
+  right: 4.3011%;
+  top: 45.1613%;
+  bottom: 43.5484%;
+  overflow: visible;
+}
+.icon {
+  width: 100%;
+  height: 100%;
+}
+
+.option {
+  padding: 8px 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+  width: 100%; /* Ensure the options take full width of the dropdown */
+}
+
+/* Highlight option on hover */
+.option:hover {
+  background-color: #f0f0f0;
+}
+
+.option:last-child {
+  border-bottom: none;
+}
+
+
+/* Add this to your MeniuSelectPages_optionDefault.module.css */
+.root {
+  position: relative;
+}
+
+
+
+
+
+
