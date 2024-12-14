@@ -32,7 +32,7 @@ export const PrintingSelectionPrinterCustom: FC<Props> = memo(function PrintingS
       <div className={classes.ellipse97}>
         <Ellipse97Icon className={classes.icon4} />
       </div>
-      <div className={classes._1_logobachkhoatoi1}></div>
+      <div className={classes._1_logobachkhoatoi2}></div>
       <div className={classes.group6}>
         <Group6Icon className={classes.icon5} />
       </div>

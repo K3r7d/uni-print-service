@@ -37,6 +37,7 @@ export const App: FC<Props> = memo(function App(props = {}) {
           <Route path="/user/:username/info" element={<Information />}/>
           <Route path="/user/:username/payment" element={<Payment></Payment>}/>
           <Route path="/user/:username/history" element={<History></History>}></Route> 
+          {/* <Route path="/user/:username/history" element={<History></History>}></Route> */}
           <Route path="/print/upload" element={<PrintingUploadCustomer></PrintingUploadCustomer>} />
           <Route path="/print/setprop" element={<SetProperties></SetProperties>} />
           <Route path="/print/printer" element={<PrintingSelectionPrinterCustom></PrintingSelectionPrinterCustom>} />

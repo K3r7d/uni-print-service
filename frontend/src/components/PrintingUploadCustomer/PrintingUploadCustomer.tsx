@@ -4,7 +4,7 @@ import axios from 'axios';
 
 import resets from '../_resets.module.css';
 import { Ellipse97Icon, Ellipse196Icon, VectorIcon } from './other.js';
-import classes from './PrintingUploadCustomer.module.css';
+import classes from './Upload.module.css';
 
 interface Props {
   className?: string;
