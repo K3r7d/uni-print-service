@@ -8,6 +8,17 @@ import { useNavigate } from 'react-router-dom';
 import "./user.css";
 
 
+import { DataGrid, GridColDef } from '@mui/x-data-grid';
+import Paper from '@mui/material/Paper';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+
+
+
 interface Log {
   document_id: string;
   file_name: string;
@@ -56,10 +67,126 @@ const History: React.FC<LogInfoProps> = ({ searchReal, searchResult = [], setSea
   const clickVisible = () => {
     setVisible(!isVisible)
   }
-  ///
+
+  interface Column {
+    id: keyof Person;
+    label: string;
+  }
+  
+  const columns: readonly Column[] = [
+    { id: 'name', label: 'Name' },
+    { id: 'email', label: 'Email address' },
+    {
+      id: 'phoneNumber',
+      label: 'Phone Number',
+    },
+    {
+      id: 'age',
+      label: 'Age',
+    },
+  ];
 
 
-
+  interface Person {
+    name: string;
+    email: string;
+    age: number;
+    phoneNumber: string;
+  }
+  
+  const rows: Person[] = [
+    {
+      name: 'John Doe',
+      email: 'john.doe@example.com',
+      age: 25,
+      phoneNumber: '+1234567890',
+    },
+    {
+      name: 'Jane Smith',
+      email: 'jane.smith@example.com',
+      age: 30,
+      phoneNumber: '+1987654321',
+    },
+    {
+      name: 'Alice Johnson',
+      email: 'alice.johnson@example.com',
+      age: 35,
+      phoneNumber: '+1122334455',
+    },
+    {
+      name: 'Bob Brown',
+      email: 'bob.brown@example.com',
+      age: 40,
+      phoneNumber: '+1555666777',
+    },
+    {
+      name: 'Sarah Lee',
+      email: 'sarah.lee@example.com',
+      age: 45,
+      phoneNumber: '+1444333222',
+    },
+    {
+      name: 'Michael Smith',
+      email: 'michael.smith@example.com',
+      age: 50,
+      phoneNumber: '+1666777888',
+    },
+    {
+      name: 'Emily Davis',
+      email: 'emily.davis@example.com',
+      age: 55,
+      phoneNumber: '+1999888777',
+    },
+    {
+      name: 'David Wilson',
+      email: 'david.wilson@example.com',
+      age: 60,
+      phoneNumber: '+1888777666',
+    },
+    {
+      name: 'Lisa Brown',
+      email: 'lisa.brown@example.com',
+      age: 65,
+      phoneNumber: '+1777666555',
+    },
+    {
+      name: 'Matthew Taylor',
+      email: 'matthew.taylor@example.com',
+      age: 70,
+      phoneNumber: '+1666555444',
+    },
+    {
+      name: 'Laura Miller',
+      email: 'laura.miller@example.com',
+      age: 75,
+      phoneNumber: '+1555444333',
+    },
+    {
+      name: 'James Martinez',
+      email: 'james.martinez@example.com',
+      age: 80,
+      phoneNumber: '+1444333222',
+    },
+    {
+      name: 'Jessica Jones',
+      email: 'jessica.jones@example.com',
+      age: 85,
+      phoneNumber: '+1333222111',
+    },
+    {
+      name: 'Ryan Clark',
+      email: 'ryan.clark@example.com',
+      age: 90,
+      phoneNumber: '+1222111000',
+    },
+    {
+      name: 'Sophia Lewis',
+      email: 'sophia.lewis@example.com',
+      age: 95,
+      phoneNumber: '+1111000999',
+    },
+  ];
+  
   return (
     <div className='root'>
 
@@ -77,65 +204,14 @@ const History: React.FC<LogInfoProps> = ({ searchReal, searchResult = [], setSea
         onChange={(e) => setSearch(e.target.value)}
       />
       </div>
-      <table className = 'log_table'>
-      <thead>
-        <tr>
-          <th>No</th>
-          <th>file_name</th>
-          <th>printer_name</th>
-          <th>location</th>
-          <th>printer_status</th>
-        </tr>
-      </thead>
-      <tbody>
-        {pageResult.map((log, index)=>(
-          <tr key = {log.document_id}>
-            <td>{(page - 1) * 10 + index + 1}</td>
-            <td>{log.document_id}</td>
-            <td>{log.file_name}</td>
-            <td>{log.printer_name}</td>
-            <td>{log.location}</td>
-            <td>{log.printer_status}</td>
-          </tr>
-        ))}
-      </tbody>
-      </table>
-      <div className='pagination'>
-        <button
-          className='pagination_button'
-          onClick={() => setPage(page - 1)}
-          disabled={page === 1}
-        >
-          Previous
-        </button>
-        {Array.from({ length: pageNums }, (_, i) => i + 1).map((each) => (
-          <button
-            key={each}
-            className={`$''pagination_button' ${
-              page === each ? 'active' : ""
-            }`}
-            onClick={() => setPage(each)}
-          >
-            {each}
-          </button>
-        ))}
-        <button
-          className='pagination_button'
-          onClick={() => setPage(page + 1)}
-          disabled={page === pageNums}
-        >
-          Next
-        </button>
-      </div>
-
-      
+       
       <animated.div
         className='userLogo'
         style={logo_animate}
         onClick={clickVisible}
       />
+      
       <div >
-
         {isVisible ? <ChevronDown className='userTemplateVisible' /> : <ChevronUp className='userTemplateVisible' />}
 
       </div>
@@ -175,7 +251,6 @@ const History: React.FC<LogInfoProps> = ({ searchReal, searchResult = [], setSea
           style={{top: "170px"}}
           onClick={()=>{navigate("/")}}
         >
-
           <LogOutIcon/> 
           <div className='colfont'> Đăng xuất
           </div>
@@ -184,11 +259,26 @@ const History: React.FC<LogInfoProps> = ({ searchReal, searchResult = [], setSea
       </animated.div>
     </div>
 
-    
-
-
-
-    
+    <TableContainer className='table' sx={{ maxHeight: 640 }}>
+      <Table stickyHeader aria-label="sticky table">
+        <TableHead>
+          <TableRow>
+            {columns.map((column) => (
+              <TableCell key={column.id}>{column.label}</TableCell>
+            ))}
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {rows.map((row) => (
+            <TableRow key={row.name}>
+              {columns.map((column) => (
+                <TableCell key={column.id}>{row[column.id]}</TableCell>
+              ))}
+          </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
 
     </div>
   );

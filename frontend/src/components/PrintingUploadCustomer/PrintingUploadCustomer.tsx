@@ -6,11 +6,19 @@ import resets from '../_resets.module.css';
 import { Ellipse97Icon, Ellipse196Icon, VectorIcon } from './other.js';
 import classes from './Upload.module.css';
 
+import { useNavigate } from 'react-router-dom';
+import { useUserContext } from '../../UserContext';
+
+
+
 interface Props {
   className?: string;
 }
 
 export const PrintingUploadCustomer: FC<Props> = memo(function PrintingUploadCustomer(props = {}) {
+  const {username,setUserId,setusername,setMoney,setf,setPaper} = useUserContext();
+
+  const navigate = useNavigate() 
   const [selectedFiles, setSelectedFiles] = useState<FileList | null>(null);
   const [uploading, setUploading] = useState<boolean>(false);
   const [uploadProgress, setUploadProgress] = useState<number>(0);
@@ -124,6 +132,7 @@ export const PrintingUploadCustomer: FC<Props> = memo(function PrintingUploadCus
                 setSelectedFiles(null);
                 setError(null);
                 setUploadProgress(0);
+                navigate(`/user/${username}`); // Navigate to the user's page
               }}
               disabled={uploading}
             >

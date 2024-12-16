@@ -44,7 +44,6 @@ const Payment: React.FC = () => {
         }
 
     } 
-
     setMoney(money + tmp - Number(putMoney))
     setPageNumber(pageNumber + Number(putMoney))
 
