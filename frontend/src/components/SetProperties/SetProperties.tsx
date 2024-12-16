@@ -31,7 +31,7 @@ interface Props {
 
 export const SetProperties: FC<Props> = memo(function PrintingSetPropertiesAnimate1(props = {}) {
   //user table
-  const {username, pageNumber, money, setMoney , setPageNumber} = useUserContext();
+  const {username,docId, pageNumber, money, setMoney , setPageNumber} = useUserContext();
   const [isVisible, setVisible] = useState<Boolean>(false);
   const [putMoney, setputMoney] = useState<String>(""); 
   const logo_animate = useSpring(
@@ -74,27 +74,27 @@ export const SetProperties: FC<Props> = memo(function PrintingSetPropertiesAnima
     };
     console.log("JSON Payload:", JSON.stringify(data, null, 2));
 
-  //   try {
-  //     // Send data to backend
-  //     const response = await fetch("/api/print-settings", {  //API POST HERE
-  //       method: "POST",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //       body: JSON.stringify(data),
-  //     });
+    try {
+      // Send data to backend
+      const response = await fetch(`http://localhost:8000/api/print-job/${docId}/settings`, {  //API POST HERE
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
 
-  //     if (response.ok) {
-  //       console.log("Data submitted successfully");
-  //       // Navigate to the next page after successful submission
-  //       navigate("print/printer");
-  //     } else {
-  //       console.error("Error submitting data:", response.status);
-  //     }
-  //   } catch (error) {
-  //     console.error("Fetch error:", error);
-  //   }
-    navigate("/print/printer");
+      if (response.ok) {
+        console.log("Data submitted successfully");
+        // Navigate to the next page after successful submission
+        navigate("print/printer");
+      } else {
+        console.error("Error submitting data:", response.status);
+      }
+    } catch (error) {
+      console.error("Fetch error:", error);
+    }
+    // navigate("/print/printer");
   };
 
   //

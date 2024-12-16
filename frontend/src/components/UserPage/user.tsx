@@ -47,7 +47,7 @@ const UserPage: React.FC = () => {
       <div className='circle2'></div>
       <div className='circle3'></div>
       <div className='circle4'></div>
-      <div className='BKU'> </div>
+      <div className='BKUs'> </div>
       <div className='Trangchu'> TRANG CHỦ</div>
       <div className='chaomungUser'>Chào mừng, {username} </div>
 

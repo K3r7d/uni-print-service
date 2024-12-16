@@ -30,7 +30,7 @@ const users: User = {name: "TaMi", pass: "123" };
 
 /* @figmaId 1:3 */
 export const EnterName_Property1Default: FC<Props> = memo(function EnterName_Property1Default(props = {}) {
-  const {username,setUserId,setusername,setMoney,setf,setPaper} = useUserContext();
+  const {username,userId,setUserId,setusername,setMoney,setf,setPaper} = useUserContext();
   const [password, setpassword] = useState<string>("");
   const [show,setshow] = useState<string>("")
   const [showerr, setshowerr] = useState(false);
@@ -79,8 +79,9 @@ export const EnterName_Property1Default: FC<Props> = memo(function EnterName_Pro
       });
   
       if (response.data.message=='Login successful') {
-        setshowerr(false);
-        setUserId(response.data.userId)
+        setshowerr(false);  
+        setUserId(response.data['user_id'])
+        console.log(userId)
         if(response.data.role == 'user'){
           navigate(`/user/${username}`); // Navigate to the user's page
         }

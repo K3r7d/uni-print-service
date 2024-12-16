@@ -9,72 +9,65 @@ import classes from './Upload.module.css';
 import { useNavigate } from 'react-router-dom';
 import { useUserContext } from '../../UserContext';
 
-
-
 interface Props {
   className?: string;
 }
 
 export const PrintingUploadCustomer: FC<Props> = memo(function PrintingUploadCustomer(props = {}) {
-  const {username,setUserId,setusername,setMoney,setf,setPaper} = useUserContext();
+  const { username,userId,docId,setDocId, setUserId, setusername, setMoney, setf, setPaper } = useUserContext();
 
-  const navigate = useNavigate() 
+  const navigate = useNavigate();
   const [selectedFiles, setSelectedFiles] = useState<FileList | null>(null);
   const [uploading, setUploading] = useState<boolean>(false);
   const [uploadProgress, setUploadProgress] = useState<number>(0);
   const [error, setError] = useState<string | null>(null);
 
-  // Handler for file change
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const files = event.target.files;
     if (files) {
       setSelectedFiles(files);
-      console.log(files); // For debugging purposes
+      console.log(files);
     }
   };
 
-  // Handler for upload button click
   const handleUpload = async () => {
-    if (!selectedFiles) {
-      setError('No files selected.');
-      return;
-    }
+  if (!selectedFiles || selectedFiles.length === 0) {
+    setError('No files selected.');
+    return;
+  }
 
-    const formData = new FormData();
-    for (let i = 0; i < selectedFiles.length; i++) {
-      formData.append('files', selectedFiles[i]);
-    }
+  const formData = new FormData();
+  for (let i = 0; i < selectedFiles.length; i++) {
+    formData.append('file', selectedFiles[i]);
+  }
+  console.log(`/api/upload-file/?user_id=${userId}`)
+  try {
+    setUploading(true);
+    setError(null);
+    setUploadProgress(0);
 
-    try {
-      setUploading(true);
-      setError(null);
-      setUploadProgress(0);
+    const response = await axios.post(`http://localhost:8000/api/upload-file/?user_id=${userId}`, formData, {
+      onUploadProgress: (progressEvent) => {
+        const percentCompleted = Math.round(
+          (progressEvent.loaded * 100) / (progressEvent.total || 1)
+        );
+        setUploadProgress(percentCompleted);
+      },
+    });
 
-      const response = await axios.post('/api/upload', formData, {
-        headers: {
-          'Content-Type': 'multipart/form-data',
-        },
-        onUploadProgress: (progressEvent: any) => {
-          const percentCompleted = Math.round(
-            (progressEvent.loaded * 100) / (progressEvent.total ?? progressEvent.loaded)
-          );
-          setUploadProgress(percentCompleted);
-        },
-      });
-
-      console.log('Upload successful:', response.data);
-      // Handle success (e.g., navigate to next page, show success message, etc.)
-      window.location.href = '/print/setprop';
-    } catch (err: any) {
-      // console.error('Upload failed:', err);
-      // setError('Upload failed. Please try again.');
-      console.log('Upload successful');
-      // Handle success (e.g., navigate to next page, show success message, etc.)
-      window.location.href = '/print/setprop';
-    } finally {
-      setUploading(false);
-    }
-  };
+    console.log('Upload successful:', response.data);
+    // Navigate or show success message
+    setDocId(response.data['documentId'])
+    console.log(response.data['documentId'])
+    console.log('hehe')
+    //window.location.href = '/print/setprop';
+  } catch (err) {
+    console.error('Upload failed:', err);
+    setError('Upload failed. Please try again.');
+  } finally {
+    setUploading(false);
+  }
+};
 
   return (
     <div className={`${resets.clapyResets} ${classes.root}`}>
@@ -108,13 +101,13 @@ export const PrintingUploadCustomer: FC<Props> = memo(function PrintingUploadCus
               <div className={classes.line2}></div>
             </div>
             <div className={classes.Outline}>
-              {/* Replace button with file input */}
               <input
                 type="file"
                 multiple
-                accept=".pdf, .doc, .docx, .xlsx"  // Limit file types
+                accept=".pdf, .doc, .docx, .xlsx"
                 className={classes.button}
                 onChange={handleFileChange}
+                max={5}
               />
             </div>
           </div>
@@ -128,11 +121,10 @@ export const PrintingUploadCustomer: FC<Props> = memo(function PrintingUploadCus
               type="button"
               className={classes.button2}
               onClick={() => {
-                // Handle cancel action, e.g., reset selected files
                 setSelectedFiles(null);
                 setError(null);
                 setUploadProgress(0);
-                navigate(`/user/${username}`); // Navigate to the user's page
+                navigate(`/user/${username}`);
               }}
               disabled={uploading}
             >
