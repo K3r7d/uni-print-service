@@ -1,7 +1,14 @@
-import { memo, useState } from 'react';
+import { memo } from 'react';
 import type { FC } from 'react';
 
+import { useState } from 'react';
+import { ChevronDown, ChevronUp, InfoIcon, LogOutIcon} from "lucide-react";
+import { useSpring, animated } from '@react-spring/web';
+import { useUserContext } from '../../UserContext';
+import { useNavigate } from 'react-router-dom';
+
 import resets from '../_resets.module.css';
+
 import { Ellipse97Icon, Ellipse196Icon, VectorIcon } from '../Upload/other';
 import { Group6Icon } from './Group6Icon.js';
 import { Group297Icon } from './Group297Icon.js';
@@ -9,33 +16,67 @@ import { PrinterInfo } from './printerInfo/printerInfo.js';
 import { Icon_TypeChevronRightSize16Col } from './Icon_TypeChevronRightSize16Col/Icon_TypeChevronRightSize16Col.js';
 import classes from './PrintingSelectionPrinterCustom.module.css';
 
+
 interface Props {
   className?: string;
   hide?: {
-    rectangle34624334?: boolean;
+    info?: boolean;
+    chevron_right?: boolean;
+    info2?: boolean;
+    chevron_right2?: boolean;
   };
 }
 
-export const PrintingSelectionPrinterCustom: FC<Props> = memo(function PrintingSelectionPrinterCustom(props = {}) {
+export const PrinterSelect: FC<Props> = memo(function PrintingSetPropertiesAnimate1(props = {}) {
+  //user table
+  const {username, pageNumber, money, setMoney , setPageNumber} = useUserContext();
+  const [isVisible, setVisible] = useState<boolean>(false);
   const [isPopupVisible, setIsPopupVisible] = useState(false); // State to control popup visibility
+  const logo_animate = useSpring(
+    {
+      from: { left: 1638 },
+      to: { left: isVisible ? 1736 : 1638 },
+      config: { duration: 100, tension: 250, friction: 30, ease: "easeInOut" },
 
+    }
+  )
+  const navigate = useNavigate();
+
+  const analog_animate = useSpring({
+    from: { height: 0, opacity: 0, transform: 'translateY(-100%)' }, // Start above the screen
+    to: {
+      height: isVisible ? 245 : 0,
+      opacity: isVisible ? 1 : 0,
+      transform: isVisible ? 'translateY(100%)' : 'translateY(-100%)', // Move down to the original position
+    },
+    config: { tension: 150, friction: 20 },
+  });
+
+  const clickVisible = () => {
+    setVisible(!isVisible)
+  }
   const handleChoosePrinter = () => {
     setIsPopupVisible(true); // Show the popup when button is clicked
 
     // Simulate a delay for the request (e.g., API call)
     setTimeout(() => {
-      setIsPopupVisible(false); // Hide the popup after 2 seconds
-    }, 8000);
+      setIsPopupVisible(false); // Hide the popup after 8 seconds
+  
+      // Show success message and navigate
+      alert('Request sent successfully'); // This is just an example. You can replace it with a custom message UI.
+      
+      // Navigate to the user info page after success
+      navigate(`/user/${username}/`);
+    },2000);
   };
+  
 
+  //
   return (
     <div className={`${resets.clapyResets} ${classes.root}`}>
-      <Icon_TypeChevronRightSize16Col
-        className={classes.icon2}
-        swap={{
-          vector: <VectorIcon className={classes.icon} />,
-        }}
-      />
+      
+      <div className={classes._1_logobachkhoatoi2}></div>
+      
       <div className={classes.ellipse196}>
         <Ellipse196Icon className={classes.icon3} />
       </div>
@@ -84,6 +125,70 @@ export const PrintingSelectionPrinterCustom: FC<Props> = memo(function PrintingS
       </button>
       <div className={classes.rectangle346243402}></div>
       <div className={classes.cancel}>Cancel</div>
+        
+
+
+
+
+
+       
+
+      
+      {/* User table */}
+      <animated.div
+        className='userLogo'
+        style={logo_animate}
+        onClick={clickVisible}
+      />
+      <div >
+
+        {isVisible ? <ChevronDown className='userTemplateVisible' /> : <ChevronUp className='userTemplateVisible' />}
+
+      </div>
+
+      <animated.div
+        className='userTemplateTable'
+        style={{
+          ...analog_animate,
+          overflow: "hidden",
+          pointerEvents: isVisible ? 'auto' : 'none',
+        }}
+      >
+        <div className='userTemplateLogo'></div>
+        <div className='userTemplateTypo'>{username}</div>
+        <div style={
+          {
+            position: 'absolute',
+            width: '278px',
+            height: '1px',
+            top: '10px',
+            left: '10px',
+            background: '#E5E7EB',
+          }} />
+
+        <div className='gmailTemplateTypo'> minh.nguyendangchill@hcmut.edu.vn</div>
+
+
+        <button className='col' style={{top: "120px"}} onClick = {()=>{navigate(`/user/${username}/info`)}}>
+
+          <InfoIcon ></InfoIcon>
+          <div className='colfont'> Hồ sơ của bạn
+          </div>
+
+        </button>
+
+        <button
+          className='col'
+          style={{top: "170px"}}
+          onClick={()=>{navigate("/")}}
+        >
+
+          <LogOutIcon/> 
+          <div className='colfont'> Đăng xuất
+          </div>
+        </button>
+
+      </animated.div>
 
       {isPopupVisible && (
         <div className={classes.popupOverlay}>

@@ -1,3 +1,37 @@
+.popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  z-index: 1000; /* Ensure it is above all other elements */
+}
+
+.popupRectangle {
+  background-color: white; /* Rectangle background */
+  width: 300px; /* Width of the rectangle */
+  height: 150px; /* Height of the rectangle */
+  border-radius: 10px; /* Rounded corners */
+  display: flex; /* Enable flexbox */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.popupText {
+  font-size: 16px; /* Text size */
+  font-weight: bold; /* Bold text */
+  color: #333; /* Text color */
+  text-align: center; /* Center text */
+}
+
+
+
+
 .component1.component1 {
   left: 90.8738%;
   right: 0;
@@ -38,7 +72,7 @@
   bottom: 61.1459%;
   flex-direction: column;
 }
-.lastLogin {
+.location {
   color: #6e6893;
   font-size: 14px;
   line-height: 18px;
@@ -53,22 +87,7 @@
   bottom: 29.2301%;
   flex-direction: column;
 }
-.lastLogin2 {
-  color: #6e6893;
-  font-size: 14px;
-  line-height: 18px;
-  font-weight: 500;
-  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-    'Liberation Sans', sans-serif;
-  letter-spacing: 0.0125em;
-  position: absolute;
-  left: 46.0194%;
-  right: 51.4563%;
-  top: 15.2641%;
-  bottom: 30.6177%;
-  flex-direction: column;
-}
-.lastLogin3 {
+.numPage {
   color: #6e6893;
   font-size: 14px;
   line-height: 18px;
@@ -85,7 +104,7 @@
   align-items: end;
   flex-direction: column;
 }
-.lastLogin4 {
+.lastmodify {
   color: #6e6893;
   font-size: 14px;
   line-height: 18px;

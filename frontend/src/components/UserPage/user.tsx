@@ -115,7 +115,7 @@ const UserPage: React.FC = () => {
         </div>
       </button>
 
-      <button className='in' onClick = {()=>navigate(`user/${username}/uploadfile`)}>
+      <button className='in' onClick = {()=>navigate(`/printer/upload`)}>
         <div className='inName'> In Tài Liệu </div>
         <div className='inTable'>
           <div className='inLogo'></div>
@@ -142,3 +142,4 @@ const UserPage: React.FC = () => {
 };
 
 export default UserPage;
+
