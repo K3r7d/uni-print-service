@@ -4,42 +4,115 @@ import { ChevronDown, ChevronUp, InfoIcon, LogOutIcon } from "lucide-react";
 import { useSpring, animated } from '@react-spring/web'; 
 import { useNavigate } from 'react-router-dom';
 import { useUserContext } from '../../UserContext';
-import { DataGrid, GridColDef, GridRowSelectionModel } from '@mui/x-data-grid';
+import { DataGrid, GridColDef, GridRowSelectionModel, GridValueFormatter } from '@mui/x-data-grid';
 import Paper from '@mui/material/Paper';
 
 import "./user.css"
 
+
 const columns: GridColDef[] = [
-  { field: 'id', headerName: 'ID', width: 70 },
-  { field: 'firstName', headerName: 'First name', width: 130 },
-  { field: 'lastName', headerName: 'Last name', width: 130 },
+  { field: 'printer_id', headerName: 'ID', width: 120 },
+  { field: 'printer_name', headerName: 'Tên Máy in', width: 250 },
+  { field: 'location', headerName: 'Địa điểm', width: 200 },
   {
-    field: 'age',
-    headerName: 'Age',
-    type: 'number',
-    width: 90,
+    field: 'supports_color',
+    headerName: 'Hỗ trợ in màu',
+    type: 'boolean',
+    width: 150,
+    renderCell: (params) => (
+      <span style={{ color: params.value ? 'green' : 'red', fontSize: '16px' }}>
+        {params.value ? '✓' : '✗'}
+      </span>
+    ),
   },
   {
-    field: 'fullName',
-    headerName: 'Full name',
-    description: 'This column has a value getter and is not sortable.',
-    sortable: false,
-    width: 160,
-    valueGetter: (value, row) => `${row.firstName || ''} ${row.lastName || ''}`,
+    field: 'supports_duplex',
+    headerName: 'Hỗ trợ in hai mặt',
+    type: 'boolean',
+    width: 150,
+    renderCell: (params) => (
+      <span style={{ color: params.value ? 'green' : 'red', fontSize: '16px' }}>
+        {params.value ? '✓' : '✗'}
+      </span>
+    ),
   },
+  { field: 'max_paper_size', headerName: 'Khổ giấy lớn nhất', width: 150 },
+  { field: 'printer_status', headerName: 'Trạng thái', width: 150 },
 ];
 
 const rows = [
-  { id: 1, lastName: 'Snow', firstName: 'Jon', age: 35 },
-  { id: 2, lastName: 'Lannister', firstName: 'Cersei', age: 42 },
-  { id: 3, lastName: 'Lannister', firstName: 'Jaime', age: 45 },
-  { id: 4, lastName: 'Stark', firstName: 'Arya', age: 16 },
-  { id: 5, lastName: 'Targaryen', firstName: 'Daenerys', age: null },
-  { id: 6, lastName: 'Melisandre', firstName: null, age: 150 },
-  { id: 7, lastName: 'Clifford', firstName: 'Ferrara', age: 44 },
-  { id: 8, lastName: 'Frances', firstName: 'Rossini', age: 36 },
-  { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
+  {
+    id: 1,
+    printer_id: 'PRN001',
+    printer_name: 'HP LaserJet 500',
+    location: '1st Floor, Room 101',
+    supports_color: 1,
+    supports_duplex: 1,
+    max_paper_size: 'A4',
+    printer_status: 'Available',
+  },
+  {
+    id: 2,
+    printer_id: 'PRN003',
+    printer_name: 'Epson EcoTank L3150',
+    location: 'Ground Floor, Reception',
+    supports_color: 0,
+    supports_duplex: 1,
+    max_paper_size: 'A4',
+    printer_status: 'Available',
+  },
+  {
+    id: 3,
+    printer_id: 'PRN004',
+    printer_name: 'Brother HL-L2350DW',
+    location: '3rd Floor, Room 308',
+    supports_color: 0,
+    supports_duplex: 1,
+    max_paper_size: 'A0',
+    printer_status: 'Available',
+  },
+  {
+    id: 4,
+    printer_id: 'PRN006',
+    printer_name: 'Samsung ProXpress M4020ND',
+    location: '1st Floor, Room 102',
+    supports_color: 0,
+    supports_duplex: 1,
+    max_paper_size: 'A1',
+    printer_status: 'Available',
+  },
+  {
+    id: 5,
+    printer_id: 'PRN007',
+    printer_name: 'Xerox WorkCentre 6515',
+    location: '5th Floor, Room 520',
+    supports_color: 1,
+    supports_duplex: 1,
+    max_paper_size: 'A3',
+    printer_status: 'Available',
+  },
+  {
+    id: 6,
+    printer_id: 'PRN009',
+    printer_name: 'Lexmark MB2236adw',
+    location: 'Basement, Storage',
+    supports_color: 0,
+    supports_duplex: 1,
+    max_paper_size: 'A4',
+    printer_status: 'Available',
+  },
+  {
+    id: 7,
+    printer_id: 'PRN010',
+    printer_name: 'Kyocera TASKalfa 2552ci',
+    location: '3rd Floor, Admin Office',
+    supports_color: 1,
+    supports_duplex: 1,
+    max_paper_size: 'A3',
+    printer_status: 'Available',
+  },
 ];
+
 
 const paginationModel = { page: 0, pageSize: 5 };
 
@@ -83,7 +156,7 @@ const SelectPrinter: React.FC = () => {
     if (selectedPrinters.length > 0) {
       const selectedPrinterDetails = rows.filter(row => selectedPrinters.includes(row.id));
       alert(`Selected Printers:\n${selectedPrinterDetails.map(printer => 
-        `${printer.firstName} ${printer.lastName}`).join('\n')}`);
+        `${printer.printer_id} ${printer.printer_name}`).join('\n')}`);
     } else {
       alert('No printers selected');
     }
